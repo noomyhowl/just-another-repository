@@ -1,0 +1,98 @@
+
+    /*==================
+        SLIDER STYLES
+    ====================*/
+    .slider__body {
+        position:relative;
+        display:block;
+        margin-top:10px;
+        transition:0.2s;
+        white-space:nowrap;
+        font-size:0;
+    }
+
+    .slider__title {
+        position:relative;
+        display:block;
+        height:40px; width:100%;
+        padding-left:30px;
+        font-family:sans-serif; font-size:20pt; font-weight:bold; color:black;
+    }
+
+    .slider__button_left {
+        position:absolute;
+        left:0; top:40px;
+        display:none;
+        height:200px; width:20px; padding-top:85px;
+        border:1px solid #eee;
+        background:#fff;
+        box-shadow:1px 1px 2px #888;
+        user-select:none;
+        font-size:12pt; font-weight:bold; font-family:monospace;
+        text-align:center;
+        vertical-align:middle;
+        z-index:1;
+        cursor:pointer;
+    }
+    .slider__button_left:hover {
+        border:1px solid #ddd;
+        box-shadow:1px 1px 2px #666;
+    }
+    .slider__button_left:active {
+        border:1.5px solid #ddd;
+        box-shadow:inset 1px 1px 2px #666;
+    }
+
+    .slider__button_right {
+        position:absolute;
+        display:block;
+        right:0; top:40px;
+        height:200px; width:20px; padding-top:85px;
+        border:1px solid #eee;
+        background:#fff;
+        box-shadow:1px 1px 2px #888;
+        user-select:none;
+        font-size:12pt; font-weight:bold; font-family:monospace;
+        text-align:center;
+        vertical-align:middle;
+        z-index:1;
+        cursor:pointer;
+    }
+    .slider__button_right:hover {
+        border:1px solid #ddd;
+        box-shadow:1px 1px 2px #666;
+    }
+    .slider__button_right:active {
+        border:1.5px solid #ddd;
+        box-shadow:inset 1px 1px 2px #666;
+    }
+
+    .slider__container {
+        position:relative;
+        display:inline-block;
+        max-height:202px; 
+        height:202px; width:100%;
+        border-top:1px solid #eee; border-bottom:1px solid #eee;
+        overflow:hidden;
+        white-space:nowrap;
+        z-index:0;
+        font-size:0;
+    }
+
+    .slider__item {
+        position:relative;
+        display:inline-block;
+        width:200px; height:200px;
+        padding:10px;
+        border:1px solid #eee;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        transition:0.2s;
+        user-select:none;
+        cursor:pointer;
+        font-size:12pt; font-weight:bold; font-family:sans-serif;
+    }
+    .slider__item:hover {
+        border:1px solid #16b67f;
+        background:#ceffee;
+    }

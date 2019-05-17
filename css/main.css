@@ -1,0 +1,291 @@
+
+    body {background:#E5E5E5;}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans'), local('NotoSans'), url('../fonts/notosans.woff2') format('woff2'), url('../fonts/notosans.woff') format('woff'), url('../fonts/notosans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans Italic'), local('NotoSans-Italic'), url('../fonts/notosansitalic.woff2') format('woff2'), url('../fonts/notosansitalic.woff') format('woff'), url('../fonts/notosansitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('../fonts/notosansbold.woff2') format('woff2'), url('../fonts/notosansbold.woff') format('woff'), url('../fonts/notosansbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'), url('../fonts/notosansbolditalic.woff2') format('woff2'), url('../fonts/notosansbolditalic.woff') format('woff'), url('../fonts/notosansbolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+    /*==========================
+        SITE NAVIGATION STYLES
+    ============================*/
+
+
+    /*=====================
+    ===== MIDDLE AREA ====*/
+
+    .middle_area {
+        display:block;
+        position:relative;
+        margin-left:200px;
+        transition:0.2s;
+    }
+
+    .middle_container {
+        display:block;
+        position:relative;
+        background:#FAFAFA;
+        padding:40px; padding-right:0;
+        overflow:hidden;
+        transition:0.2s;
+        font-size:0;
+    }
+    .middle_container__title {
+        display:block;
+        position:relative;
+        font-family:Noto Sans; font-style:normal; font-weight:bold; font-size:28px;
+        text-decoration:none;
+        color:#14295E;
+        height:30px;
+        margin-bottom:20px;
+    }
+    .middle_container__title a {text-decoration:none; color:#14295E;}
+    .middle_container__title a:hover {text-decoration:underline;}
+
+    .subtitle_container {
+        display:block;
+        position:relative;
+        width:100%;
+        height:20px;
+        margin-bottom:20px;
+    }
+    
+    .middle_container__subtitle {
+        display:inline-block;
+        position:relative;
+        font-family:Noto Sans; font-style:normal; font-size:15px;
+        text-decoration:none;
+        color:#14295E;
+        margin-right:30px;
+        height:20px;
+    }
+    .middle_container__subtitle:hover {text-decoration:underline;}
+
+
+
+    /*====================
+    ====== TOP MENU =====*/
+    .top_menu {
+        display:block;
+        position:relative;
+        padding-left:40px; padding-right:40px;
+        padding-top:30px; padding-bottom:30px;
+        height:110px;
+        background:#DFE2EA;
+        border: 1px solid #DFE2EA;
+        transition:0.2s;
+    }
+
+    .top_menu__input_group { /* groups label and input together */
+        position:relative;
+    }
+    .top_menu__input {
+        position:relative;
+        display:block;
+        padding-left:25px;
+        padding-right:25px;
+        font-size:12pt;
+        height:50px;
+        width:100%;
+        border:1px solid #8994AF; box-sizing:border-box; border-radius:2px;
+        outline:none;
+        background:#fff;
+        z-index:4;
+        color: #8994AF;
+        font-family:Noto Sans; font-size:15px;
+    }
+    .top_menu__input_picture {
+        position:absolute;
+        background:#fff;
+        background-image:url(https://image.flaticon.com/icons/png/128/149/149852.png);
+        background-size:contain;
+        right:56px;
+        top:45px;
+        width:20px; height:20px;
+        z-index:5;
+    }
+    .top_menu__label {
+        position:absolute;
+        top:40px;
+        left:0;
+        width:100%;
+        font-size: 10pt; font-family:Noto Sans;
+        text-align:left;
+        color:#fff;
+        opacity:0;
+        transform: translateY(0);
+        transition: all 0.3s ease-out;
+        z-index:3;
+        user-select:none;
+        cursor:default;
+    }
+    .top_menu__input:focus + .top_menu__label {
+        opacity:1;
+        transform: translateY(45px);
+    }
+
+    .top_menu__background {
+        position:fixed;
+        display:none;
+        left:200px; top:0;
+        width:calc(100% - 200px); height:100%;
+        background:#14295E;
+        transition: all 0.2s ease-out;
+        opacity:0.7;
+        z-index:2;
+    }
+
+    .top_menu__search_block {
+        position:absolute;
+        display:none; /* script changes to block */
+        left:1px; top:49px;
+        width:calc(100% - 2px); max-height:750px;
+        overflow:auto;
+        z-index:2;
+        user-select:none;
+        cursor:pointer;
+    }
+    .top_menu__search_item {
+        position:relative;
+        display:block;
+        padding:5px;
+        padding-left:20px;
+        width:100%;
+        max-height:129px;
+        height:99px;
+        border-bottom:1px solid #eee;
+        background:#FFF;
+        font-family:arial;
+    }
+    .top_menu__search_item:hover {
+        background:#e8edf9;/*rgb(229,245,244);*/
+    }
+
+    .search_item__image {
+        display:block;
+        float:left;
+        background:inherit;
+        background-size:contain;
+        margin-right:20px;
+        width:89px; height:89px;
+        max-height:89px; max-width:89px;
+    }
+    .search_item__name_field {
+        display:block;
+        margin-top:15px;
+        font-family:Noto Sans;
+        font-size:16px;
+        font-weight:bold;
+        color:#14295E;
+    }
+    .search_item__job_field {
+        display:block;
+        font-family:Noto Sans;
+        font-size:15px;
+        color:#14295E;
+    }
+
+
+    /*====================
+    ====== LEFT MENU ====*/
+    .left_menu {
+        display:block;
+        position:fixed;
+        left:0;
+        top:0;
+        height:100%;
+        width:200px;
+        background:#14295E;
+        min-height:540px;
+        font-size:0;
+        z-index:5;
+    }
+
+    .left_menu__header {
+        display:block;
+        margin:40px;
+        height:42px;
+        width:100px;
+        background:#14295E;
+        background-image:url(http://dns-master.ru/zen/static/images/white_rc_bs.png);
+        background-size:cover;
+    }
+
+    .left_menu__footer {
+        position:absolute;
+        display:inline-block;
+        left:1px;
+        bottom:1px;
+        width:198px;
+        height:70px;
+        transition:0.3s;
+        border:1px solid #16b67f00;
+        color:#ffffff80;
+        text-align:center; padding-top:24px;
+        font-family:monospace; font-size:14pt; font-weight:bold;
+        user-select:none;
+    }
+    .left_menu__footer:hover {
+        border:1px solid #ffffff99;
+        background:#00000030;
+        color:#ffffffff;
+    }
+
+
+    .left_menu__item {
+        display:block;
+        height:20px;
+        color:#fff;
+        font-family:Noto Sans; font-size:15px; font-weight:bold;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        text-align:left;
+        margin-top:30px;
+        margin-left:40px;
+        user-select:none;
+        text-decoration:none;
+    }
+    .left_menu__item a {color:#fff; text-decoration:none;}
+    .left_menu__item a:hover {color:#9df; transition:0.2s;}
+    .left_menu__item:hover {
+        color:#9df;
+        transition:0.2s;
+    }
+
+    /*=================
+         SCREEN SIZE
+    ===================*/
+
+    
+    @media screen and (min-width:1798px){
+        .middle_area { width:1580px; }
+    }
+    @media screen and (min-width:1418px) and (max-width:1797px){
+        .middle_area { width:1200px; }
+    }
+    @media screen and (max-width:1417px) {
+        .middle_area { width:820px; }
+    }
+    

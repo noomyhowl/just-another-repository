@@ -1,0 +1,243 @@
+    /*=================
+        BLOCK STYLES
+    ===================*/
+
+	.block {
+		display:inline-block;
+		position:relative;
+		width:360px; height:360px;
+		margin-top:20px; margin-right:20px;
+        padding:30px;
+		background: #FFFFFF;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+		overflow:hidden;
+        transition:0.2s;
+        cursor:pointer;
+	}
+    .block:hover { background:#e8edf9; }
+
+	.block__header {
+		display:block;
+		height:20px;
+		font-family:Noto Sans; font-size:13px;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+    .block__header a {text-decoration:none; color:#EF3F23;}
+    .block__header a:hover {text-decoration:underline;}
+
+	.block__caption {
+		display:block;
+        margin-top:10px;
+		max-height:80px;
+		overflow:hidden;
+		font-family:Noto Sans; font-size:15px; font-weight:bold;
+        color:#14295E;
+	}
+
+	.block__content {
+		display:block;
+        margin-top:10px;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		max-height:125px;
+		font-family:Noto Sans; font-size:15px;
+        color:#14295E;
+	}
+
+	.block__date {
+		display:block;
+		position:absolute;
+		font-size:10pt;	font-family:Noto Sanes;
+		bottom:30px; left:30px;
+	}
+    .block__date a {color:#8994AF; text-decoration:none;}
+    .block__date a:hover {color:#757f99; text-decoration:underline;}
+
+
+    .calendar_block_container {
+        display:block;
+        position:relative;
+        width:100%;
+        height:322px;
+        overflow:hidden;
+        margin-top:20px;
+        white-space:nowrap;
+    }
+
+    .calendar_block {
+        display:inline-block;
+        position:relative;
+        width:270px; height:320px;
+        margin-right:10px;
+        padding:30px; padding-top:130px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        overflow:hidden;
+        transition:0.2s;
+        cursor:pointer;
+        font-size:0;
+        vertical-align:top;
+    }
+    .calendar_block:hover {background:#e8edf9;}
+
+    .calendar_block__date {
+        position:absolute;
+        display:block;
+        top:30px; left:30px;
+        height:70px; margin-right:10px;
+        font-family:Noto Sans; font-size:56px;
+        color:#14295E;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+    .calendar_block__date.holiday {color:#EF3F23;}
+    .calendar_block__date:hover + .calendar_block__day {text-decoration:underline;}
+    .calendar_block__day {
+        position:absolute;
+        display:block;
+        top:34px; left:110px;
+        margin-top:4px;
+        font-family:Noto Sans; font-size:28px;
+        color:#14295E;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+    .calendar_block__day.holiday {color:#EF3F23;}
+    .calendar_block__day:hover {text-decoration:underline;}
+
+    .calendar_block__icon {
+        position:relative;
+        display:block;
+        float:left;
+        width:20px; height:20px;
+        margin-right:15px;
+        background:#EF3F23;
+        border-radius:5px;
+    }
+    .calendar_block__icon:hover + .calendar_block__name {text-decoration:underline;}
+
+    .calendar_block__name {
+        position:relative;
+        display:block;
+        height:20px;
+        overflow:hidden;
+        text-overflow:clip;
+        font-family:Noto Sans; font-size:15px;
+        color:#14295E;
+        margin-bottom:10px;
+    }
+    .calendar_block__name a {text-decoration:none; color:#14295E;}
+    .calendar_block__name a:hover {text-decoration:underline;}
+
+    .calendar_block__button {
+        position:absolute;
+        display:block;
+        width:40px; height:320px;
+        top:90px;
+        background:#FFFFFF;
+        box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
+        border-radius:2px;
+        padding-top:130px;
+        padding-left:5px;
+        font-family:Noto Sans; font-size:28px; font-weight:bold;
+        color:#14295E;
+        user-select:none;
+        cursor:pointer;
+        vertical-align:top;
+    }
+    .calendar_block__button.right {right:0;}
+    .calendar_block__button.left {left:0; /*display:none;*/}
+    .calendar_block__button:hover {background:#e8edf9;}
+
+    .calendar_block__button_arrow {
+        display:inline-block;
+        position:relative;
+        background:#ffffff00;
+        background-image:url(../img/arrow.PNG);
+        background-size:contain;
+        width:30px;
+        height:47px;
+    }
+.calendar_block__button_arrow.left {transform: rotate(180deg);;}
+
+
+    .contacts_block {
+        display:inline-block;
+        position:relative;
+        width:360px; height:320px;
+        margin-right:20px; margin-top:20px;
+        padding:30px; padding-right:28px;
+        background:#FFFFFF;
+        box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2);
+        border-radius:2px;
+        overflow:hidden;
+        transition:0.2s;
+        cursor:pointer;
+        font-size:0;
+    }
+    .contacts_block:hover {background:#e8edf9;}
+
+    .contacts_block__icon {
+        position:absolute;
+        display:block;
+        left:24px; top:30px;
+        width:70px; height:70px;
+        background:#14295E;
+    }
+
+    .contacts__description_container{
+        position:relative;
+        display:block;
+        margin-left:80px;
+        max-width:222px;
+        height:110px;
+        overflow:hidden;
+        text-overflow:clip;
+        margin-bottom:30px;
+    }
+    .contacts_block__name {
+        position:relative;
+        display:block;
+        font-family:Noto Sans; font-size:15px; font-weight:bold;
+        color:#14295E;
+        margin-bottom:10px;
+        max-height:50%;
+        overflow:hidden;
+        text-overflow:clip;
+    }
+    .contacts_block__description {
+        position:relative;
+        display:block;
+        font-family:Noto Sans; font-size:15px;
+        color:#14295E;
+        margin-bottom:60px;
+    }
+
+    .contacts_block__info {
+        position:relative;
+        display:block;
+        width:100%;
+        margin-top:20px;
+    }
+
+    .contacts_block__info_name {
+        position:relative;
+        display:inline-block;
+        width:80px;
+        font-family:Noto Sans; font-size:15px;
+        color:#8994AF;
+        vertical-align:top;
+    }
+    .contacts_block__info_value {
+        position:relative;
+        display:inline-block;
+        width:222px;
+        font-family:Noto Sans; font-size:15px;
+        color:#14295E;
+        vertical-align:top;
+    }
+    .contacts_block__info_value a {text-decoration:none; color:#14295E;}
+    .contacts_block__info_value a:hover {text-decoration:underline;}
